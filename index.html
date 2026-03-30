@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deepak Couture - Consultation Form</title>
+<style>
+  /* --- LUXURY FONT IMPORTS --- */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap');
+
+  /* --- HIGH-END THEME VARIABLES --- */
+  :root {
+    --primary-color: #111111;
+    --accent-color: #D4AF37; /* Subtle Gold */
+    --bg-color: #FAFAFA;
+    --text-color: #333333;
+    --border-color: #DDDDDD;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  /* --- FADING LOGO SPLASH SCREEN --- */
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 1.5s ease-in-out 2s forwards; /* Fades out after 2 seconds */
+  }
+
+  /* --- CSS TYPOGRAPHY LOGO --- */
+  .splash-logo-text {
+    text-align: center;
+    animation: pulse 2.5s infinite;
+  }
+  
+  .logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    letter-spacing: 6px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .logo-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 8px;
+    color: #555555;
+    text-transform: uppercase;
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.02); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* --- FORM STYLING --- */
+  .form-container {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 400;
+  }
+
+  h1 { font-size: 2.5em; margin-bottom: 10px; }
+  p.subtitle { text-align: center; font-size: 0.9em; color: #777; margin-bottom: 40px; letter-spacing: 1px; text-transform: uppercase;}
+
+  .form-section { margin-bottom: 40px; }
+  .form-section h2 { font-size: 1.5em; text-align: left; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 25px;}
+
+  /* Luxury Input Fields (Underlines instead of boxes) */
+  .input-group { margin-bottom: 25px; }
+  label { display: block; font-weight: 500; font-size: 0.85em; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;}
+  
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="file"], select, textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus, textarea:focus, select:focus { outline: none; border-bottom: 1px solid var(--primary-color); }
+  textarea { resize: vertical; min-height: 80px; }
+
+  /* Submit Button */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+  }
+  .submit-btn:hover { background-color: var(--accent-color); }
+</style>
+</head>
+<body>
+
+<div class="splash-screen">
+  <div class="splash-logo-text">
+    <div class="logo-main">DEEPAK</div>
+    <div class="logo-sub">Fashion Designer</div>
+  </div>
+</div>
+
+<div class="form-container">
+  <h1>Bespoke Consultation</h1>
+  <p class="subtitle">Deepak Fashion Designer</p>
+
+  <form action="YOUR_FORMSPREE_LINK_HERE" method="POST">
+    
+    <div class="form-section">
+      <h2>1. Client Details</h2>
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" name="Full Name" required>
+      </div>
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" name="Email" required>
+      </div>
+      <div class="input-group">
+        <label>Phone / WhatsApp Number</label>
+        <input type="tel" name="Phone" required>
+      </div>
+      <div class="input-group">
+        <label>Location / Timezone</label>
+        <input type="text" name="Location" placeholder="e.g., London, UK (GMT)" required>
+      </div>
+      <div class="input-group">
+        <label>Instagram Handle (Optional but recommended)</label>
+        <input type="text" name="Instagram" placeholder="@yourusername">
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>2. Event & Vision</h2>
+      <div class="input-group">
+        <label>What event(s) are you dressing for?</label>
+        <input type="text" name="Event Type" required>
+      </div>
+      <div class="input-group">
+        <label>Date of Event</label>
+        <input type="date" name="Event Date" required>
+      </div>
+      <div class="input-group">
+        <label>What specific garments are you looking for?</label>
+        <input type="text" name="Garment Type" placeholder="e.g., Lehenga, Gown, separate skirt and blouse" required>
+      </div>
+      <div class="input-group">
+        <label>Why are you looking for a bespoke piece for this event?</label>
+        <textarea name="Why Bespoke" required></textarea>
+      </div>
+      <div class="input-group">
+        <label>Are there any colors, fabrics, or styles you DO NOT want?</label>
+        <textarea name="Dislikes"></textarea>
+      </div>
+      </div>
+
+    <div class="form-section">
+      <h2>3. The Process & Timeline</h2>
+      <div class="input-group">
+        <label>Our standard production time is 6-9 months. Does your event date allow for this?</label>
+        <select name="Timeline Check" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Yes">Yes, that works perfectly.</option>
+            <option value="No, need rush">No, my event is sooner (I may need to inquire about rush availability).</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label>Have you had a bespoke couture outfit made before?</label>
+        <select name="Previous Experience" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Yes">Yes, I am familiar with the process.</option>
+            <option value="No">No, this will be my first time.</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label>Will anyone else be joining the call to help you decide? (e.g., Mom, Sister)</label>
+        <input type="text" name="Additional Guests" placeholder="If yes, please plan to have them on the consultation call.">
+      </div>
+      <div class="input-group">
+        <label>Comfortable Investment Range</label>
+        <input type="text" name="Budget" placeholder="e.g., £1,500 - £2,500+" required>
+      </div>
+      <div class="input-group">
+        <label>Where did you first hear about us?</label>
+        <input type="text" name="Referral Source" required>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Request Consultation</button>
+  </form>
+</div>
+
+</body>
+</html>
